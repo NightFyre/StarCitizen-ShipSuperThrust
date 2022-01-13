@@ -46,8 +46,8 @@ int ShipThrust_hook(INT64 _RCX, INT64 _RDX, INT64 _R8)
     if (ship::bBOOST)
     {
         INT64 _RAX = _R8 + 0xC;
-        *(int*)_R8 = 0xFFFFFFFF;
-        *(int*)_RAX = 0xFFFFFFFF;
+        *(int*)_R8 = ship::sfTHRUST;
+        *(int*)_RAX = ship::sfTHRUST;
         return ShipThrust(_RCX, _RDX, _R8);
     }
     else
